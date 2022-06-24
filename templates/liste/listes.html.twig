@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block extrastyles %}
+    <link rel="stylesheet" href="{{ asset('css/list/list.css') }}">
+{% endblock %}
+{% block title %}{{ parent() }} All Your Todo Lists{% endblock %}
+
+{% block body %}
+    <h1>All Your Todo Lists</h1>
+
+    <div class="lists box">
+        <div class="one">
+        <ul>{% for liste in listes %}
+                <a href="{{ path('details', {'id': liste.id}) }}" title="Accéder à la liste"> <li>{{ liste.name }}</li></a>
+
+
+            {% endfor %}</ul></div>
+    </div>
+
+{% endblock %}

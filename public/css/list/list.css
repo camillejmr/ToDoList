@@ -1,0 +1,99 @@
+.lists {
+    text-align: center;
+    margin-top:40px;
+}
+
+li {
+    background-color: #DDD8C4;
+    list-style-type: none;
+    display: block;
+    position: relative;
+    margin: 10px;
+    padding: 15px 30px 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .2);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s, box-shdow .2s;
+}
+
+a {
+    color: #fff;
+}
+
+button {
+    display: block;
+    position: relative;
+    margin: 20px;
+    padding: 15px 30px 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #a3C9a8;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .2);
+    font-size: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s, box-shadow .2s;
+}
+
+button:hover, button:focus, button:active {
+    box-shadow: 0 0 20px rgb(0, 0, 0, .6);
+    background-color: #84B59F;
+}
+
+/*li::before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    bottom: 10px;*/
+/*    left: 10px;*/
+/*    width: 32px;*/
+/*    border: 3px solid #fff;*/
+/*    border-radius: 100px;*/
+/*    transition: bckground-color .2s;*/
+/*}*/
+
+
+li:hover, li:focus {
+    box-shadow: 0 0 20px rgb(0, 0, 0, .6);
+    background-color: #A3C9A8;
+}
+
+.box {
+    padding: 0 300px 0 250px;
+    /*display:flex;*/
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-content: stretch;
+
+
+}
+
+@media (max-width: 1000px) {
+    .box {
+        padding: 0 200px 0 150px;
+    }
+}
+
+@media (max-width: 750px) {
+    .box {
+        padding: 0;
+    }
+}
+
+.one {
+    flex-shrink: 2;
+}
+
+.two {
+
+
+}
+

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block extrastyles %}
+    <link rel="stylesheet" href="{{ asset('css/list/list.css') }}">
+{% endblock %}
+{% block title %}{{ parent() }} Créer une liste{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+        <h1>Ajouter une To Do List</h1>
+    </div>
+    <div>{{form_start(listeForm)}}
+        {{form_widget(listeForm)}}
+<button>Créer la liste !</button>
+        {{form_end(listeForm)}}
+    </div>
+{% endblock %}
