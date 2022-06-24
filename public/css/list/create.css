@@ -1,0 +1,28 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+input {
+}
+
+
+button:hover, button:focus, button:active {
+    box-shadow: 0 0 20px rgb(0, 0, 0, .6);
+    background-color: #84B59F;
+}
+
+a {
+    color: #fff;
+}
+
+.one {
+
+}
+
+.two {
+}
+
+#liste {
+    padding-bottom: 50px;
+}

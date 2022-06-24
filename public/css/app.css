@@ -68,6 +68,28 @@ nav ul li .survol {
 
 }
 
+button {
+    display: block;
+    position: relative;
+    margin: 20px auto !important;
+    padding: 15px 30px 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #a3C9a8;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .2);
+    font-size: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s, box-shadow .2s;
+}
+
+button:hover, button:focus, button:active {
+    box-shadow: 0 0 20px rgb(0, 0, 0, .6);
+    background-color: #84B59F;
+}
+
 a:hover::before {
     width: 100%;
 }
@@ -76,11 +98,21 @@ label {
     display: block
 }
 
+a {
+    text-decoration: none;
+}
+
 input, textarea, select {
     margin-bottom: 1rem;
     box-sizing: border-box;
     width: 150px;
     min-width: 50%;
+}
+
+input {
+    border: 3px solid #fff;
+    border-radius: 100px;
+    margin-top: 20px;
 }
 
 main {
@@ -216,5 +248,71 @@ body {
 
 nav-title {
     text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.containerform {
+    text-align: center;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.labelscheckbox {
+    display: inline-block;
+    text-align: right;
+    width: 300px;
+    padding: 5px;
+    vertical-align: top;
+
+}
+
+.rightTabCheckbox {
+    justify-content:flex-end;
+    display: inline-block;
+    padding-top: 15px;
+    text-align: left;
+    width: 38%;
+    vertical-align: middle;
+}
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: stretch;
+    gap: 50px;
+    padding: 0 50px 0 50px;
+
+}
+
+.color {
+    padding: 100px;
+    border-radius: 10px;
+    background-color: #DDD8C4;
+}
+
+.content {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #DDD8C4;
 }
 

@@ -1,19 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-//html {
-//  min-height: 100%;
-//}
-
-/*.continer {*/
-/*    position: bsolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    !*trnsform: trnslte(-50%, -50%);*!*/
-/*}*/
 
 input[type=checkbox] {
   position: absolute;
@@ -99,10 +87,7 @@ input:checked + label::before {
 }
 
 .two {
-
-
 }
-
 .color {
   padding: 20px;
   border-radius: 10px;

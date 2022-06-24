@@ -51,6 +51,12 @@ class Liste
      */
     private $ListTasks;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="listes")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $idUser;
+
     public function __construct()
     {
         $this->ListTasks = new ArrayCollection();
@@ -136,6 +142,18 @@ class Liste
                 $listTask->setIdListe(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getIdUser(): ?User
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(?User $idUser): self
+    {
+        $this->idUser = $idUser;
 
         return $this;
     }

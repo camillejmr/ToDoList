@@ -7,13 +7,24 @@
 {% block body %}
     <h1>All Your Todo Lists</h1>
 
-    <div class="lists box">
-        <div class="one">
-        <ul>{% for liste in listes %}
-                <a href="{{ path('details', {'id': liste.id}) }}" title="Accéder à la liste"> <li>{{ liste.name }}</li></a>
 
-
-            {% endfor %}</ul></div>
-    </div>
+    {% if app.user %}
+        <div class="lists box">
+            <div class="one">
+                <ul>
+                    {% for liste in listes %}
+                        <a href="{{ path('details', {'id': liste.id}) }}" title="Accéder à la liste">
+                            <li>{{ liste.name }}</li>
+                        </a>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+    {% if not app.user %}
+        <div class="container ">
+            <div class="center color">{% include ('inc/login-register.html.twig') %}</div>
+        </div>
+    {% endif %}
 
 {% endblock %}
