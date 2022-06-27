@@ -1,11 +1,9 @@
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 input {
 }
-
 
 button:hover, button:focus, button:active {
     box-shadow: 0 0 20px rgb(0, 0, 0, .6);
@@ -14,13 +12,6 @@ button:hover, button:focus, button:active {
 
 a {
     color: #fff;
-}
-
-.one {
-
-}
-
-.two {
 }
 
 #liste {
