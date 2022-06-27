@@ -1,27 +1,5 @@
-
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-input[type=checkbox] {
-  position: absolute;
-  left: -9999px;
-}
-
-label.checkbox {
-  display: block;
-  position: relative;
-  margin: 10px;
-  padding: 15px 30px 15px 62px;
-  border: 3px solid #fff;
-  border-radius: 100px;
-  color: #fff;
-  background-color: #a3C9a8;
-  box-shadow: 0 0 20px rgb(0, 0, 0, .2);
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  transition: bckground-color .2s, box-shdow .2s;
 }
 
 button {
@@ -46,6 +24,28 @@ button:hover, button:focus, button:active {
   background-color: #84B59F;
 }
 
+input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+
+label.checkbox {
+  display: block;
+  position: relative;
+  margin: 10px;
+  padding: 15px 30px 15px 62px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #a3C9a8;
+  box-shadow: 0 0 20px rgb(0, 0, 0, .2);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: bckground-color .2s, box-shdow .2s;
+}
+
+
 label.checkbox::before {
   content: '';
   display: block;
@@ -58,7 +58,6 @@ label.checkbox::before {
   border-radius: 100px;
   transition: bckground-color .2s;
 }
-
 
 label.checkbox:hover, input[type=checkbox]:focus + label {
   box-shadow: 0 0 20px rgb(0, 0, 0, .6);
@@ -86,8 +85,6 @@ input:checked + label::before {
   flex-grow: 1.5;
 }
 
-.two {
-}
 .color {
   padding: 20px;
   border-radius: 10px;

@@ -23,11 +23,11 @@ class RegistrationFormType extends AbstractType
             ->add('nom', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Your name please.',
+                        'message' => 'Merci de saisir votre nom.',
                     ]),
                     new Length([
                         'min' => 2,
-                        'minMessage' => 'Your name should be at least {{ limit }} characters',
+                        'minMessage' => 'Votre nom doit comporter au minimum {{ limit }} caractères.',
                         'max' => 55,
                     ]),
                 ],
@@ -35,11 +35,11 @@ class RegistrationFormType extends AbstractType
             ->add('prenom', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Your name please.',
+                        'message' => 'Mreci de saisir votre prénom.',
                     ]),
                     new Length([
                         'min' => 2,
-                        'minMessage' => 'Your surname should be at least {{ limit }} characters',
+                        'minMessage' => 'Votre prénom doit comporter au minimum {{ limit }} caractères.',
                         'max' => 55,
                     ]),
                 ],
@@ -47,7 +47,7 @@ class RegistrationFormType extends AbstractType
             ->add('adresse', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Your adress please.',
+                        'message' => 'Merci de saisir votre adresse.',
                     ]),
                     new Length([
                         'min' => 2,
@@ -59,11 +59,11 @@ class RegistrationFormType extends AbstractType
             ->add('codePostal', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Your cp please.',
+                        'message' => 'Merci de saisir le code postal.',
                     ]),
                     new Length([
                         'min' => 5,
-                        'minMessage' => 'Your cp should be at least {{ limit }} characters',
+                        'minMessage' => 'Le code postal doit comporter {{ limit }} caractères.',
                         'max' => 5,
                     ]),
                 ],
@@ -71,40 +71,32 @@ class RegistrationFormType extends AbstractType
             ->add('ville', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Your city please.',
+                        'message' => 'Merci de saisir la ville.',
                     ]),
                     new Length([
                         'min' => 2,
-                        'minMessage' => 'Your city should be at least {{ limit }} characters',
+                        'minMessage' => 'La ville doit comporter au minimum {{ limit }} caractères.',
                         'max' => 80,
                     ]),
                 ],
             ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'invalid_message' => 'The password fields must match.',
+                'invalid_message' => 'Les mots de passe doivent être identiques.',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options' => ['label' => 'Password'],
-                'second_options' => ['label' => 'Repeat Password'],
+                'first_options' => ['label' => 'Mot de passe',],
+                'second_options' => ['label' => 'Vérification du mot de passe'],
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Merci de saisir un mot de passe.',
                     ]),
                     new Length([
                         'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
+                        'minMessage' => 'Votre mot de passe doit comporter au minimum {{ limit }} caractères.',
                         // max length allowed by Symfony for security reasons
                         'max' => 4096,
-                    ]),
-                ],
-            ])
-            ->add('agreeTerms', CheckboxType::class, [
-                "mapped"=>false,
-                'constraints' => [
-                    new IsTrue([
-                        'message' => 'Merci d\'accepter les conditions.',
                     ]),
                 ],
             ]);

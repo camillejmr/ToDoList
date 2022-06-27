@@ -30,10 +30,12 @@
 
                 {# If you want to control the URL the user is redirected to on success
         <input type="hidden" name="_target_path" value="/account"/> #}
-
-                    <div class="labelscheckbox">
-                        <input type="checkbox" name="_remember_me"></div>
-                    <div class="rightTabCheckbox"><label> Se souvenir de moi</label></div>
+                <div class="labels">
+                    <label for="_remember_me"> Se souvenir de moi</label>
+                </div>
+                <div class="rightTab">
+                    <input type="checkbox" id="_remember_me" name="_remember_me">
+                </div>
 
                 <button type="submit">Se connecter</button>
                 <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a>
