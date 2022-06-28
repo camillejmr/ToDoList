@@ -123,7 +123,7 @@ input {
     border-radius: 5px
 }
 
-.flash-success {
+.flash-success, .flash-notice {
     background-color: #A3C9A8;
 }
 

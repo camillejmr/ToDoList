@@ -4,9 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
-use App\Form\UpdateTaskType;
 use App\Repository\ListeRepository;
-use App\Repository\TaskRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,7 +42,7 @@ class TaskController extends AbstractController
     /**
      * @Route("updateTask/{id}", name="updateTask")
      */
-    public function updateTask(ListeRepository $listeRepository, int $id, Request $request, TaskRepository $taskRepository, EntityManagerInterface $entityManager): Response
+    public function updateTask(ListeRepository $listeRepository, int $id, Request $request, EntityManagerInterface $entityManager): Response
     {
         $task = new Task();
         $liste = $listeRepository->findOneById($id);
@@ -53,8 +51,6 @@ class TaskController extends AbstractController
         foreach ($liste->getListTasks() as $task) {
 
             if (array_key_exists((string)$task->getId(), $request->request->all())) {
-                dump($task);
-                dump($request->request->get($task->getId()));
                 $task->setDone(true);
                 $entityManager->persist($task);
                 $entityManager->flush();
