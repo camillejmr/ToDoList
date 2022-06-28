@@ -18,19 +18,6 @@ a {
     color: #fff;
 }
 
-.footer-wave-svg {
-    background-color: transparent;
-    display: block;
-    height: 30px;
-    position: relative;
-    top: -1px;
-    width: 100%;
-}
-
-.footer-wave-path {
-    fill: #fffff2;
-}
-
 .footer-content {
     margin-left: auto;
     margin-right: auto;
@@ -46,11 +33,6 @@ a {
     padding-right: 15px;
     width: 100%;
     color: #fff;
-}
-
-.footer-content-column ul li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 .footer-logo-link {
@@ -169,7 +151,7 @@ a {
     height: 26px;
     left: 3px;
     top: 11px;
-    width: 26px;
+    width: 50px;
 }
 
 .footer-social-link {
@@ -182,7 +164,6 @@ a {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
     clip-path: inset(0px 0px 99.9% 99.9%);
     overflow: hidden;
     height: 1px;
@@ -208,22 +189,22 @@ a {
     width: 28px;
 }
 
-.footer-social-link.youtube {
+.footer-social-link.linkedin {
     height: 24px;
     left: 123px;
-    top: 12px;
-    width: 24px;
+    top: 7px;
+    width: 50px;
 }
 
 .footer-social-link.github {
     height: 34px;
     left: 172px;
     top: 7px;
-    width: 34px;
+    width: 50px;
 }
 
 .footer-copyright {
-    background-color: #027b9a;
+    background-color: #69A297;
     color: #fff;
     padding: 15px 30px;
     text-align: center;
@@ -250,9 +231,7 @@ a {
 }
 
 
-/* Media Query For different screens */
 @media (min-width: 320px) and (max-width: 479px) {
-    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
     .footer-content {
         margin-left: auto;
         margin-right: auto;
@@ -263,7 +242,6 @@ a {
 }
 
 @media (min-width: 480px) and (max-width: 599px) {
-    /* smartphones, Android phones, landscape iPhone */
     .footer-content {
         margin-left: auto;
         margin-right: auto;
@@ -274,7 +252,6 @@ a {
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
     .footer-content {
         margin-left: auto;
         margin-right: auto;
@@ -282,21 +259,6 @@ a {
         padding: 40px 15px 1050px;
         position: relative;
     }
-}
-
-@media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-
 }
 
 @media (min-width: 760px) {
@@ -308,17 +270,8 @@ a {
         position: relative;
     }
 
-    .footer-wave-svg {
-        height: 50px;
-    }
-
     .footer-content-column {
         width: 24.99%;
     }
 }
 
-@media (min-width: 568px) {
-    /* .footer-content-column {
-        width: 49.99%;
-    } */
-}
