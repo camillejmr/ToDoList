@@ -11,8 +11,6 @@ a {
 .pg-footer {
     font-family: 'Roboto', sans-serif;
 }
-
-
 .footer {
     background-color: #004658;
     color: #fff;
@@ -73,7 +71,7 @@ a {
 
 .footer-call-to-action-button:hover {
     background-color: #fffff2;
-    color: #00bef0;
+    color: #69a297;
 }
 
 .button:last-of-type {
@@ -81,7 +79,7 @@ a {
 }
 
 .footer-call-to-action-button {
-    background-color: #027b9a;
+    background-color: #69a297;
     border-radius: 21px;
     color: #fffff2;
     display: inline-block;
