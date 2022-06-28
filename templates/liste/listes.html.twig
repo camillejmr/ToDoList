@@ -14,7 +14,7 @@
                 <ul>
                     {% for liste in listes %}
                         <a href="{{ path('details', {'id': liste.id}) }}" title="Accéder à la liste">
-                            <li>{{ liste.name }}</li>
+                            <li class="details">{{ liste.name }}</li>
                         </a>
                     {% endfor %}
                 </ul>

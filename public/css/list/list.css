@@ -1,4 +1,4 @@
-li {
+li.details {
     background-color: #DDD8C4;
     list-style-type: none;
     display: block;
@@ -36,7 +36,34 @@ button {
     transition: background-color .2s, box-shadow .2s;
 }
 
-li:hover, li:focus {
+nav ul li.details {
+    text-decoration: none !important;
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li.details .survol {
+    text-decoration: none !important;
+    color: #3a444f;
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li.details {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+li.details:hover, li.details:focus {
     box-shadow: 0 0 20px rgb(0, 0, 0, .6);
     background-color: #A3C9A8;
 }
